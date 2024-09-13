@@ -91,10 +91,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+ init_Ex678910();
   while (1)
   {
-	    clearAllClock();
-	  HAL_Delay(1000);
+	  Ex678910_run();
+	  HAL_Delay(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

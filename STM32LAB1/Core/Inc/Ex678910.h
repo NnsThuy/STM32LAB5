@@ -13,4 +13,6 @@
 void init_Ex678910();
 void  Ex678910_run();
 void clearAllClock();
+void setNumberOnClock(int num);
+void clearNumberOnClock(int num);
 #endif /* INC_EX678910_H_ */
