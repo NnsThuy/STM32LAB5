@@ -18,11 +18,11 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <Ex1_8.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "Ex1.h"
 #include "Software.h"
 /* USER CODE END Includes */
 
@@ -95,15 +95,33 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-setTimer1(50);
-
+setTimer(0, 250);
+setTimer(1, 1000);
+setTimer(2, 500);
+setTimer(3, 1000);
+updateClockBuffer();
   while (1)
   {
-     if (timer1_flag==1){
-    	 setTimer1(50);
-    	 update7SEG();
+     if (timerFlag[0]==1){
+    	 setTimer(0, 250);
+    	  Ex1_8_run();
      }
 
+     if (timerFlag[1]==1){
+		 setTimer(1, 1000);
+		 HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+     }
+
+     if (timerFlag[2]==1){
+         	 setTimer(2, 500);
+         	 Clock();
+         	 updateClockBuffer();
+
+          }
+     if (timerFlag[3]==1){
+     		 setTimer(3, 1000);
+     		 HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+     }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -205,14 +223,17 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin|EN0_Pin|EN1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, DOT_Pin|LED_RED_Pin|EN0_Pin|EN1_Pin
+                          |EN2_Pin|EN3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, SEG_0_Pin|SEG_1_Pin|SEG_2_Pin|SEG_3_Pin
                           |SEG_4_Pin|SEG_5_Pin|SEG_6_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LED_RED_Pin EN0_Pin EN1_Pin */
-  GPIO_InitStruct.Pin = LED_RED_Pin|EN0_Pin|EN1_Pin;
+  /*Configure GPIO pins : DOT_Pin LED_RED_Pin EN0_Pin EN1_Pin
+                           EN2_Pin EN3_Pin */
+  GPIO_InitStruct.Pin = DOT_Pin|LED_RED_Pin|EN0_Pin|EN1_Pin
+                          |EN2_Pin|EN3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

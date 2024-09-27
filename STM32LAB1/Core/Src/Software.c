@@ -6,19 +6,21 @@
  */
 #include "Software.h"
 
-int timer1_counter=0;
-int timer1_flag=0;
+int timerCounter[10];
+int timerFlag[10];
 
-void setTimer1(int duration){
-	timer1_counter=duration;
-	timer1_flag=0;
+void setTimer(int index, int counter){
+	timerCounter[index]=counter/10;
+	timerFlag[index]=0;
 }
 
 void timeRun(){
-	if(timer1_counter>0){
-		timer1_counter--;
-		if(timer1_counter<=0){
-			timer1_flag=1;
+	for (int i=0; i<10; i++){
+		if(timerCounter[i]>=0){
+			timerCounter[i]--;
+			if(timerCounter[i]<=0){
+				timerFlag[i]=1;
+			}
 		}
 	}
 }
