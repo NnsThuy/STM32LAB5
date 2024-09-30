@@ -953,8 +953,8 @@ setTimer(1, 1000);
  8000766:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
  800076a:	2001      	movs	r0, #1
  800076c:	f7ff ff9a 	bl	80006a4 <setTimer>
-setTimer(2, 500);
- 8000770:	f44f 71fa 	mov.w	r1, #500	; 0x1f4
+setTimer(2, 1000);
+ 8000770:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
  8000774:	2002      	movs	r0, #2
  8000776:	f7ff ff95 	bl	80006a4 <setTimer>
 setTimer(3, 1000);
@@ -998,8 +998,8 @@ updateClockBuffer();
  80007b8:	689b      	ldr	r3, [r3, #8]
  80007ba:	2b01      	cmp	r3, #1
  80007bc:	d108      	bne.n	80007d0 <main+0x8c>
-         	 setTimer(2, 500);
- 80007be:	f44f 71fa 	mov.w	r1, #500	; 0x1f4
+         	 setTimer(2, 1000);
+ 80007be:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
  80007c2:	2002      	movs	r0, #2
  80007c4:	f7ff ff6e 	bl	80006a4 <setTimer>
          	 Clock();

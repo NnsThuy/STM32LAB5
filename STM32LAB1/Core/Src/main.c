@@ -97,7 +97,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 setTimer(0, 250);
 setTimer(1, 1000);
-setTimer(2, 500);
+setTimer(2, 1000);
 setTimer(3, 1000);
 updateClockBuffer();
   while (1)
@@ -113,7 +113,7 @@ updateClockBuffer();
      }
 
      if (timerFlag[2]==1){
-         	 setTimer(2, 500);
+         	 setTimer(2, 1000);
          	 Clock();
          	 updateClockBuffer();
 
