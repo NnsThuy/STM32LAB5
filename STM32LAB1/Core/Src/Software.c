@@ -1,7 +1,7 @@
 /*
  * Software.c
  *
- *  Created on: Sep 21, 2024
+ *  Created on: Nov 8, 2024
  *      Author: Song Thuy
  */
 #include "Software.h"
@@ -14,8 +14,15 @@ void setTimer(int index, int counter){
 	timerFlag[index]=0;
 }
 
+void clearTimer(){
+	for(int i=0;i<10;i++){
+	timerCounter[i]=0;
+	timerFlag[i]=0;
+	}
+}
+
 void timeRun(){
-	for (int i=0; i<10; i++){
+	for(int i=0;i<10;i++){
 		if(timerCounter[i]>=0){
 			timerCounter[i]--;
 			if(timerCounter[i]<=0){
@@ -23,4 +30,13 @@ void timeRun(){
 			}
 		}
 	}
+}
+
+int isTimerExpired(int index){
+	if(timerFlag[index]==1){
+		timerFlag[index]=0;
+		return 1;
+	}
+	else
+	return 0;
 }

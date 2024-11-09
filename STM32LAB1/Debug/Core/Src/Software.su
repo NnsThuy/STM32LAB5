@@ -1,2 +1,4 @@
 Software.c:12:6:setTimer	16	static
-Software.c:17:6:timeRun	16	static
+Software.c:17:6:clearTimer	16	static
+Software.c:24:6:timeRun	16	static
+Software.c:35:5:isTimerExpired	16	static

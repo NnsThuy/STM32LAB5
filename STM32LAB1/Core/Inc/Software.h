@@ -1,7 +1,7 @@
 /*
  * Software.h
  *
- *  Created on: Sep 21, 2024
+ *  Created on: Nov 8, 2024
  *      Author: Song Thuy
  */
 
@@ -9,9 +9,8 @@
 #define INC_SOFTWARE_H_
 
 #include "main.h"
-
 extern int timerFlag[10];
-
+int isTimerExpired(int index);
 void setTimer(int index, int counter);
 void timeRun();
 

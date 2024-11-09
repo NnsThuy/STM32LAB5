@@ -1,0 +1,7 @@
+Traffic_light.c:12:6:init_Traffic_light	8	static
+Traffic_light.c:21:6:TurnOnRed_A	8	static
+Traffic_light.c:26:6:TurnOnYellow_A	8	static
+Traffic_light.c:31:6:TurnOnGreen_A	8	static
+Traffic_light.c:36:6:TurnOnGreen_B	8	static
+Traffic_light.c:41:6:TurnOnRed_B	8	static
+Traffic_light.c:46:6:TurnOnYellow_B	8	static

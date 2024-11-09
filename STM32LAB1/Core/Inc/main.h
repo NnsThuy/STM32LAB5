@@ -57,32 +57,46 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define DOT_Pin GPIO_PIN_4
-#define DOT_GPIO_Port GPIOA
-#define LED_RED_Pin GPIO_PIN_5
-#define LED_RED_GPIO_Port GPIOA
-#define EN0_Pin GPIO_PIN_6
-#define EN0_GPIO_Port GPIOA
-#define EN1_Pin GPIO_PIN_7
+#define EN1_Pin GPIO_PIN_1
 #define EN1_GPIO_Port GPIOA
-#define SEG_0_Pin GPIO_PIN_0
-#define SEG_0_GPIO_Port GPIOB
-#define SEG_1_Pin GPIO_PIN_1
-#define SEG_1_GPIO_Port GPIOB
-#define SEG_2_Pin GPIO_PIN_2
-#define SEG_2_GPIO_Port GPIOB
-#define EN2_Pin GPIO_PIN_8
+#define EN2_Pin GPIO_PIN_2
 #define EN2_GPIO_Port GPIOA
-#define EN3_Pin GPIO_PIN_9
+#define EN3_Pin GPIO_PIN_3
 #define EN3_GPIO_Port GPIOA
-#define SEG_3_Pin GPIO_PIN_3
-#define SEG_3_GPIO_Port GPIOB
-#define SEG_4_Pin GPIO_PIN_4
-#define SEG_4_GPIO_Port GPIOB
-#define SEG_5_Pin GPIO_PIN_5
-#define SEG_5_GPIO_Port GPIOB
-#define SEG_6_Pin GPIO_PIN_6
-#define SEG_6_GPIO_Port GPIOB
+#define EN4_Pin GPIO_PIN_4
+#define EN4_GPIO_Port GPIOA
+#define BUTTON0_Pin GPIO_PIN_5
+#define BUTTON0_GPIO_Port GPIOA
+#define BUTTON1_Pin GPIO_PIN_6
+#define BUTTON1_GPIO_Port GPIOA
+#define BUTTON2_Pin GPIO_PIN_7
+#define BUTTON2_GPIO_Port GPIOA
+#define LED_1_Pin GPIO_PIN_0
+#define LED_1_GPIO_Port GPIOB
+#define LED_2_Pin GPIO_PIN_1
+#define LED_2_GPIO_Port GPIOB
+#define LED_3_Pin GPIO_PIN_2
+#define LED_3_GPIO_Port GPIOB
+#define SEG4_Pin GPIO_PIN_10
+#define SEG4_GPIO_Port GPIOB
+#define SEG5_Pin GPIO_PIN_11
+#define SEG5_GPIO_Port GPIOB
+#define SEG6_Pin GPIO_PIN_12
+#define SEG6_GPIO_Port GPIOB
+#define LED_4_Pin GPIO_PIN_3
+#define LED_4_GPIO_Port GPIOB
+#define LED_5_Pin GPIO_PIN_4
+#define LED_5_GPIO_Port GPIOB
+#define LED_6_Pin GPIO_PIN_5
+#define LED_6_GPIO_Port GPIOB
+#define SEG0_Pin GPIO_PIN_6
+#define SEG0_GPIO_Port GPIOB
+#define SEG1_Pin GPIO_PIN_7
+#define SEG1_GPIO_Port GPIOB
+#define SEG2_Pin GPIO_PIN_8
+#define SEG2_GPIO_Port GPIOB
+#define SEG3_Pin GPIO_PIN_9
+#define SEG3_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
