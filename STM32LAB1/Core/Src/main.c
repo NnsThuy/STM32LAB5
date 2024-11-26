@@ -29,6 +29,7 @@
 #include "Traffic_light.h"
 #include "Led7_segment.h"
 #include "fsm_manual.h"
+#include "scheduler.h"
 
 /* USER CODE END Includes */
 
@@ -101,19 +102,15 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-setTimer(0, 5000);
-setTimer(1, 3000);
-setTimer(2, 100);
-setTimer(3, 1000);
-setTimer(4, 1000);
-setTimer(5, 250);
-setTimer(6, 250);
+  SCH_Add_Task(fsm_automatic_run, 0, 100, 0);
+  SCH_Add_Task(fsm_manual_run, 0, 100, 1);
+  SCH_Add_Task(led7_run, 0, 50, 2);
+
   while (1)
   {
 
     /* USER CODE END WHILE */
-	  fsm_automatic_run();
-	  fsm_manual_run();
+	  SCH_Dispatch_Tasks();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -252,7 +249,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	timeRun();
+	SCH_Update();
 	getKeyInput();
 
 }

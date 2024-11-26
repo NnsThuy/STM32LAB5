@@ -9,6 +9,7 @@
 #include "Software.h"
 #include "Led7_segment.h"
 int i =0;
+int counter=0;
 void init_led7(){
 	  HAL_GPIO_WritePin(SEG0_GPIO_Port, SEG0_Pin, SET);
       HAL_GPIO_WritePin(SEG1_GPIO_Port, SEG1_Pin, SET);
@@ -161,8 +162,7 @@ void led7_run(){
 	led_buffer[2]=counterB/10;
 	led_buffer[1]=counterA%10;
 	led_buffer[0]=counterA/10;
-	if(isTimerExpired(2)==1){
-		setTimer(2, 100);
+
 		update7SEG(index_led++);
-	 }
+
 }

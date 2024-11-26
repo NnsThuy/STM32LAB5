@@ -26,9 +26,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/Software.h ../Core/Inc/main.h ../Core/Inc/Button.h \
  ../Core/Inc/fsm_automatic.h ../Core/Inc/global.h ../Core/Inc/Software.h \
  ../Core/Inc/Led7_segment.h ../Core/Inc/Traffic_light.h \
- ../Core/Inc/Button.h ../Core/Inc/fsm_automatic.h ../Core/Inc/global.h \
- ../Core/Inc/Traffic_light.h ../Core/Inc/Led7_segment.h \
- ../Core/Inc/fsm_manual.h
+ ../Core/Inc/Button.h ../Core/Inc/scheduler.h ../Core/Inc/global.h \
+ ../Core/Inc/fsm_automatic.h ../Core/Inc/Traffic_light.h \
+ ../Core/Inc/Led7_segment.h ../Core/Inc/fsm_manual.h \
+ ../Core/Inc/scheduler.h
 
 ../Core/Inc/main.h:
 
@@ -98,12 +99,16 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Core/Inc/Button.h:
 
-../Core/Inc/fsm_automatic.h:
+../Core/Inc/scheduler.h:
 
 ../Core/Inc/global.h:
+
+../Core/Inc/fsm_automatic.h:
 
 ../Core/Inc/Traffic_light.h:
 
 ../Core/Inc/Led7_segment.h:
 
 ../Core/Inc/fsm_manual.h:
+
+../Core/Inc/scheduler.h:

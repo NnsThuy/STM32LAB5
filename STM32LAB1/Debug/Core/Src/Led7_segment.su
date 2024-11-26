@@ -1,4 +1,4 @@
-Led7_segment.c:12:6:init_led7	8	static
-Led7_segment.c:23:6:display7SEG	16	static
-Led7_segment.c:123:6:update7SEG	16	static
-Led7_segment.c:159:6:led7_run	8	static
+Led7_segment.c:13:6:init_led7	8	static
+Led7_segment.c:24:6:display7SEG	16	static
+Led7_segment.c:124:6:update7SEG	16	static
+Led7_segment.c:160:6:led7_run	8	static

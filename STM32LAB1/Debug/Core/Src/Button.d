@@ -25,7 +25,8 @@ Core/Src/Button.o: ../Core/Src/Button.c ../Core/Inc/button.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Core/Inc/fsm_automatic.h ../Core/Inc/global.h ../Core/Inc/Software.h \
  ../Core/Inc/Led7_segment.h ../Core/Inc/Traffic_light.h \
- ../Core/Inc/Button.h ../Core/Inc/fsm_automatic.h ../Core/Inc/Software.h
+ ../Core/Inc/Button.h ../Core/Inc/scheduler.h ../Core/Inc/global.h \
+ ../Core/Inc/fsm_automatic.h ../Core/Inc/Software.h
 
 ../Core/Inc/button.h:
 
@@ -90,6 +91,10 @@ Core/Src/Button.o: ../Core/Src/Button.c ../Core/Inc/button.h \
 ../Core/Inc/Traffic_light.h:
 
 ../Core/Inc/Button.h:
+
+../Core/Inc/scheduler.h:
+
+../Core/Inc/global.h:
 
 ../Core/Inc/fsm_automatic.h:
 

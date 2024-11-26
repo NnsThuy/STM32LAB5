@@ -33,4 +33,12 @@ extern int man_yellow;
 extern int red;
 extern int green;
 extern int yellow;
+
+#define ERROR_SCH_TOO_MANY_TASKS		14
+#define RETURN_NORMAL 					15
+#define ERROR_SCH_CANNOT_DELETE_TASK 	16
+#define RETURN_ERROR					17
+
+extern uint8_t Error_code_G;
+extern uint32_t status;
 #endif /* INC_GLOBAL_H_ */

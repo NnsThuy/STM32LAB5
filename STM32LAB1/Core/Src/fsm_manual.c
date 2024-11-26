@@ -7,7 +7,7 @@
 
 
 #include "fsm_manual.h"
-
+int counter_led=0;
 void fsm_manual_run(){
 	switch(status_A){
 			case manual_init:
@@ -19,19 +19,16 @@ void fsm_manual_run(){
 				HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
 				HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
 
-				if (1)
-				{
-					status_A = manual_red;
-					setTimer(5, 250);
 
-				}
+					status_A = manual_red;
+
+
+
 				break;
 		    case manual_red:
 				 counterA=1;
 				 counterB=man_red;
 				 led7_run();
-				if(isTimerExpired(5)==1){
-				  setTimer(5, 250);
 
 				  HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
 				  HAL_GPIO_WritePin(LED_2_GPIO_Port, LED_2_Pin, RESET);
@@ -40,8 +37,8 @@ void fsm_manual_run(){
 				  HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, RESET);
 				  HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
 				  HAL_GPIO_TogglePin(LED_6_GPIO_Port, LED_6_Pin);
+                  HAL_Delay(250);
 
-				}
 				  if(isButtonPressed(0)==1){
 					  status_A=manual_yellow;
 				  }
@@ -58,8 +55,8 @@ void fsm_manual_run(){
 				  counterA=2;
 				 counterB=man_yellow;
 				 led7_run();
-				if(isTimerExpired(5)==1){
-				  setTimer(5, 250);
+
+
 				  HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, RESET);
 				  HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
 				  HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, RESET);
@@ -67,7 +64,8 @@ void fsm_manual_run(){
 				  HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, RESET);
 				  HAL_GPIO_TogglePin(LED_5_GPIO_Port, LED_5_Pin);
 				  HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
-				}
+				  HAL_Delay(250);
+
 				 if(isButtonPressed(0)==1){
 					  status_A=manual_green;
 				  }
@@ -85,8 +83,7 @@ void fsm_manual_run(){
 				  counterA=3;
 				 counterB=man_green;
 				 led7_run();
-			 if(isTimerExpired(5)==1){
-				  setTimer(5, 250);
+
 				  HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, RESET);
 				  HAL_GPIO_WritePin(LED_2_GPIO_Port, LED_2_Pin, RESET);
 				  HAL_GPIO_TogglePin(LED_3_GPIO_Port, LED_3_Pin);
@@ -94,7 +91,8 @@ void fsm_manual_run(){
 				  HAL_GPIO_TogglePin(LED_4_GPIO_Port, LED_4_Pin);
 				  HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
 				  HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
-				 }
+				  HAL_Delay(250);
+
 				  if(isButtonPressed(0)==1){
 					  if(red>(green+yellow)){
 						green+=red-(green+yellow);
@@ -107,10 +105,6 @@ void fsm_manual_run(){
 					  status_B=GREEN;
 					  counterA = red;
 					  counterB = green;
-					setTimer(0, red*1000);
-					setTimer(1, green*1000);
-					setTimer(3, 1000);
-					setTimer(4, 1000);
 
 
 
@@ -125,6 +119,7 @@ void fsm_manual_run(){
 
 					  break;
 				  default:
+
 					  break;
 				  }
 }

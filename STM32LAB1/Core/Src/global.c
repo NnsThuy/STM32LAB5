@@ -12,3 +12,5 @@ int status_B=GREEN;
 int led_buffer[4] = {1, 2, 3, 0};
 int man_red=0, man_green=0, man_yellow=0;
 int red = 5, green=3, yellow=2;
+uint8_t Error_code_G = 0;
+uint32_t status = 0;
