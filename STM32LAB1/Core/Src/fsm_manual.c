@@ -28,7 +28,7 @@ void fsm_manual_run(){
 		    case manual_red:
 				 counterA=1;
 				 counterB=man_red;
-				 led7_run();
+
 
 				  HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
 				  HAL_GPIO_WritePin(LED_2_GPIO_Port, LED_2_Pin, RESET);
@@ -37,7 +37,6 @@ void fsm_manual_run(){
 				  HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, RESET);
 				  HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
 				  HAL_GPIO_TogglePin(LED_6_GPIO_Port, LED_6_Pin);
-                  HAL_Delay(250);
 
 				  if(isButtonPressed(0)==1){
 					  status_A=manual_yellow;
@@ -54,7 +53,7 @@ void fsm_manual_run(){
 			case manual_yellow:
 				  counterA=2;
 				 counterB=man_yellow;
-				 led7_run();
+
 
 
 				  HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, RESET);
@@ -64,7 +63,7 @@ void fsm_manual_run(){
 				  HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, RESET);
 				  HAL_GPIO_TogglePin(LED_5_GPIO_Port, LED_5_Pin);
 				  HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
-				  HAL_Delay(250);
+
 
 				 if(isButtonPressed(0)==1){
 					  status_A=manual_green;
@@ -82,7 +81,7 @@ void fsm_manual_run(){
 		   case manual_green:
 				  counterA=3;
 				 counterB=man_green;
-				 led7_run();
+
 
 				  HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, RESET);
 				  HAL_GPIO_WritePin(LED_2_GPIO_Port, LED_2_Pin, RESET);
@@ -91,7 +90,7 @@ void fsm_manual_run(){
 				  HAL_GPIO_TogglePin(LED_4_GPIO_Port, LED_4_Pin);
 				  HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
 				  HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
-				  HAL_Delay(250);
+
 
 				  if(isButtonPressed(0)==1){
 					  if(red>(green+yellow)){

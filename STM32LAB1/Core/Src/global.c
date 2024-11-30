@@ -5,12 +5,13 @@
  *      Author: Song Thuy
  */
 #include "global.h"
-int counterA=RED;
-int counterB=GREEN;
+
 int status_A=RED;
 int status_B=GREEN;
 int led_buffer[4] = {1, 2, 3, 0};
 int man_red=0, man_green=0, man_yellow=0;
 int red = 5, green=3, yellow=2;
+int counterA;
+int counterB;
 uint8_t Error_code_G = 0;
 uint32_t status = 0;

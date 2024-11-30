@@ -10,6 +10,7 @@
 
 #include "global.h"
 #include "scheduler.h"
+void initialize();
 void fsm_automatic_run();
-
+void update_buffer();
 #endif /* INC_FSM_AUTOMATIC_H_ */

@@ -22,8 +22,7 @@
 #define manual_green 12
 #define manual_yellow 13
 
-extern int counterA;
-extern int counterB;
+
 extern int status_A;
 extern int status_B;
 extern int led_buffer[4];
@@ -33,6 +32,8 @@ extern int man_yellow;
 extern int red;
 extern int green;
 extern int yellow;
+extern int counterA;
+extern int counterB;
 
 #define ERROR_SCH_TOO_MANY_TASKS		14
 #define RETURN_NORMAL 					15

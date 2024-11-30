@@ -102,10 +102,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  SCH_Add_Task(fsm_automatic_run, 0, 100, 0);
-  SCH_Add_Task(fsm_manual_run, 0, 100, 1);
-  SCH_Add_Task(led7_run, 0, 50, 2);
-
+  initialize();
+  SCH_Add_Task(fsm_automatic_run, 0, 1, 0);
+  SCH_Add_Task(fsm_manual_run, 0, 25, 1);
+  SCH_Add_Task(led7_run, 5, 25, 2);
+  SCH_Add_Task(update_buffer, 100, 100, 3);
   while (1)
   {
 
