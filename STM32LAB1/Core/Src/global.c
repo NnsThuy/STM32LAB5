@@ -1,17 +1,22 @@
 /*
  * global.c
  *
- *  Created on: Oct 27, 2024
+ *  Created on: Dec 9, 2024
  *      Author: Song Thuy
  */
 #include "global.h"
+#include "Auto_fsm.h"
 
-int status_A=RED;
-int status_B=GREEN;
-int led_buffer[4] = {1, 2, 3, 0};
-int man_red=0, man_green=0, man_yellow=0;
-int red = 5, green=3, yellow=2;
-int counterA;
-int counterB;
-uint8_t Error_code_G = 0;
-uint32_t status = 0;
+int statusA = INIT;
+int ADC_value = 0;
+
+uint8_t buffer_byte;
+uint8_t buffer[MAX_BUFFER_SIZE];
+uint8_t index_buffer = 0;
+uint8_t buffer_flag = 0;
+
+uint8_t cmd_flag = INIT;
+uint8_t cmd_data[MAX_CMD_SIZE];
+uint8_t cmd_data_index = 0;
+
+char str[50];

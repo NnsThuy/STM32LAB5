@@ -18,14 +18,16 @@ Core/Src/global.o: ../Core/Src/global.c ../Core/Inc/global.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/Software.h ../Core/Inc/Led7_segment.h \
- ../Core/Inc/fsm_automatic.h ../Core/Inc/global.h ../Core/Inc/scheduler.h \
- ../Core/Inc/Traffic_light.h ../Core/Inc/Button.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
+ ../Core/Inc/Auto_fsm.h ../Core/Inc/Software.h ../Core/Inc/global.h \
+ ../Core/Inc/Auto_fsm.h
 
 ../Core/Inc/global.h:
 
@@ -69,6 +71,10 @@ Core/Src/global.o: ../Core/Src/global.c ../Core/Inc/global.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h:
 
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h:
+
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h:
+
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h:
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
@@ -79,16 +85,12 @@ Core/Src/global.o: ../Core/Src/global.c ../Core/Inc/global.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
+
+../Core/Inc/Auto_fsm.h:
+
 ../Core/Inc/Software.h:
-
-../Core/Inc/Led7_segment.h:
-
-../Core/Inc/fsm_automatic.h:
 
 ../Core/Inc/global.h:
 
-../Core/Inc/scheduler.h:
-
-../Core/Inc/Traffic_light.h:
-
-../Core/Inc/Button.h:
+../Core/Inc/Auto_fsm.h:

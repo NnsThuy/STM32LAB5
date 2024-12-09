@@ -1,0 +1,4 @@
+Auto_fsm.c:11:5:isStringEqualToRST	16	static
+Auto_fsm.c:18:5:isStringEqualToOK	16	static
+Auto_fsm.c:25:6:command_parser_fsm	8	static
+Auto_fsm.c:55:6:uart_communiation_fsm	8	static

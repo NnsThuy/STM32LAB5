@@ -1,7 +1,7 @@
 /*
  * global.h
  *
- *  Created on: Nov 8, 2024
+ *  Created on: Dec 9, 2024
  *      Author: Song Thuy
  */
 
@@ -9,37 +9,32 @@
 #define INC_GLOBAL_H_
 
 #include "main.h"
-#include "Software.h"
-#include "Led7_segment.h"
-#include "Traffic_light.h"
-#include "Button.h"
-#define RED 5
-#define GREEN 3
-#define YELLOW 2
+#include "Auto_fsm.h"
 
-#define manual_init 10
-#define manual_red 11
-#define manual_green 12
-#define manual_yellow 13
+#define INIT 0
+#define READING 1
+#define STOP 2
+#define RST 8
+#define OK 9
 
+#define MAX_CMD_SIZE 3
+#define MAX_BUFFER_SIZE 30
 
-extern int status_A;
-extern int status_B;
-extern int led_buffer[4];
-extern int man_red;
-extern int man_green;
-extern int man_yellow;
-extern int red;
-extern int green;
-extern int yellow;
-extern int counterA;
-extern int counterB;
+extern int statusA;
+extern int ADC_value;
 
-#define ERROR_SCH_TOO_MANY_TASKS		14
-#define RETURN_NORMAL 					15
-#define ERROR_SCH_CANNOT_DELETE_TASK 	16
-#define RETURN_ERROR					17
+extern ADC_HandleTypeDef hadc1;
+extern UART_HandleTypeDef huart2;
 
-extern uint8_t Error_code_G;
-extern uint32_t status;
+extern uint8_t buffer_byte;
+extern uint8_t buffer[MAX_BUFFER_SIZE];
+extern uint8_t index_buffer;
+extern uint8_t buffer_flag;
+
+extern uint8_t cmd_flag;
+extern uint8_t cmd_data[MAX_CMD_SIZE];
+extern uint8_t cmd_data_index;
+
+extern char str[50];
+
 #endif /* INC_GLOBAL_H_ */

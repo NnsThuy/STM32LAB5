@@ -9,9 +9,13 @@
 #define INC_SOFTWARE_H_
 
 #include "main.h"
-extern int timerFlag[10];
-int isTimerExpired(int index);
-void setTimer(int index, int counter);
-void timeRun();
+
+extern int timer1_flag;
+extern int timer2_flag;
+
+void setTimer1(int duration);
+void setTimer2(int duration);
+
+void timerRun();
 
 #endif /* INC_SOFTWARE_H_ */
